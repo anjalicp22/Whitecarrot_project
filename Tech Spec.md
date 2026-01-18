@@ -50,13 +50,13 @@ Stores company information and branding.
 | id                | SERIAL       | Primary key                   | PRIMARY KEY, AUTO_INCREMENT |
 | name              | VARCHAR(255) | Company name                  | NOT NULL                    |
 | slug              | VARCHAR(255) | URL-friendly identifier       | UNIQUE, NOT NULL            |
+| logo_url          | TEXT         | URL to company logo           |                             |
 | primary_color     | VARCHAR(7)   | Hex color for primary theme   | DEFAULT '#4F46E5'           |
 | secondary_color   | VARCHAR(7)   | Hex color for secondary theme | DEFAULT '#111827'           |
-| logo_url          | TEXT         | URL to company logo           |                             |
 | banner_url        | TEXT         | URL to banner image           |                             |
 | culture_video_url | TEXT         | URL to culture video          |                             |
 | created_at        | TIMESTAMP    | Creation timestamp            | DEFAULT NOW()               |
-| updated_at        | TIMESTAMP    | Last update timestamp         | DEFAULT NOW()               |
+| user_id           | INTEGER      | Associated user ID            |                             |
 
 #### `page_sections`
 
@@ -70,23 +70,26 @@ Manages content sections for career pages.
 | content     | JSONB       | Section content (title, body/items)          | NOT NULL                    |
 | order_index | INTEGER     | Display order                                | NOT NULL                    |
 | visible     | BOOLEAN     | Whether section is visible                   | DEFAULT TRUE                |
-| created_at  | TIMESTAMP   | Creation timestamp                           | DEFAULT NOW()               |
-| updated_at  | TIMESTAMP   | Last update timestamp                        | DEFAULT NOW()               |
 
 #### `jobs`
 
 Stores job postings for companies.
 
-| Column          | Type         | Description                       | Constraints                 |
-| --------------- | ------------ | --------------------------------- | --------------------------- |
-| id              | SERIAL       | Primary key                       | PRIMARY KEY, AUTO_INCREMENT |
-| company_id      | INTEGER      | Foreign key to companies          | FOREIGN KEY, NOT NULL       |
-| title           | VARCHAR(255) | Job title                         | NOT NULL                    |
-| location        | VARCHAR(255) | Job location                      | NOT NULL                    |
-| employment_type | VARCHAR(50)  | Type (Full-time, Part-time, etc.) | NOT NULL                    |
-| description     | TEXT         | Job description                   |                             |
-| created_at      | TIMESTAMP    | Creation timestamp                | DEFAULT NOW()               |
-| updated_at      | TIMESTAMP    | Last update timestamp             | DEFAULT NOW()               |
+| Column           | Type         | Description                       | Constraints                 |
+| ---------------- | ------------ | --------------------------------- | --------------------------- |
+| id               | SERIAL       | Primary key                       | PRIMARY KEY, AUTO_INCREMENT |
+| company_id       | INTEGER      | Foreign key to companies          | FOREIGN KEY                 |
+| title            | VARCHAR(255) | Job title                         | NOT NULL                    |
+| job_slug         | VARCHAR(255) | URL-friendly job identifier       |                             |
+| location         | VARCHAR(255) | Job location                      | NOT NULL                    |
+| work_policy      | VARCHAR(50)  | Work policy (e.g., Remote)        |                             |
+| department       | VARCHAR(255) | Department                        |                             |
+| employment_type  | VARCHAR(50)  | Type (Full-time, Part-time, etc.) | NOT NULL                    |
+| job_type         | VARCHAR(50)  | Job type (e.g., Temporary)        |                             |
+| experience_level | VARCHAR(50)  | Experience level (e.g., Senior)   |                             |
+| salary_range     | VARCHAR(255) | Salary range                      |                             |
+| posted_days_ago  | VARCHAR(50)  | Days since posted                 |                             |
+| description      | TEXT         | Job description                   |                             |
 
 #### `career_pages`
 
@@ -99,8 +102,6 @@ Manages publishing and SEO for career pages.
 | published       | BOOLEAN      | Whether page is published | DEFAULT FALSE                 |
 | seo_title       | VARCHAR(255) | SEO title                 |                               |
 | seo_description | TEXT         | SEO description           |                               |
-| created_at      | TIMESTAMP    | Creation timestamp        | DEFAULT NOW()                 |
-| updated_at      | TIMESTAMP    | Last update timestamp     | DEFAULT NOW()                 |
 
 ## Test Plan
 
