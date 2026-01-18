@@ -125,3 +125,74 @@ npm run build
 **Testing**: Implement proper unit test and integration tests to maintain code reliability and stability.
 
 **Error Handling**: Improve error handling with detailed error boundaries and proper logging to make debugging easier and improve user experience.
+
+## Step-by-Step User Guide
+
+### For Recruiters
+
+#### 1. Getting Started
+
+1. **Access the Platform**: Visit the application URL and select "Recruiter" on the landing page
+2. **Choose Company**: Select an existing company from the dropdown or create a new one
+3. **Navigate to Editor**: Click "Continue" to access the company editor
+
+#### 2. Setting Up Your Company Profile
+
+1. **Basic Information**: Enter your company name (auto-generates URL slug)
+2. **Brand Colors**: Choose primary and secondary colors for your theme
+3. **Visual Assets**:
+   - Upload company logo (recommended: 200x200px, PNG/SVG)
+   - Add banner image (recommended: 1200x400px)
+   - Include culture video URL (YouTube embed supported)
+
+#### 3. Building Content Sections
+
+1. **Add Sections**: Click "Add Section" to create new content blocks
+2. **Example Content Types**:
+   - **About**: Company mission, values, and story
+   - **Benefits**: Employee perks and advantages
+   - **Culture**: Work environment and company life
+   - **Custom**: Any additional information
+3. **Edit Content**: Click "Edit" on any section to modify title and content
+4. **Reorder Sections**: Drag and drop sections to rearrange their order
+
+#### 4. Managing Job Postings
+
+1. **Access Jobs Tab**: Switch to the "Jobs" tab in the editor
+2. **Create Jobs**: Click "Add Job" to create new positions or use existing ones
+3. **Job Details**:
+   - Title, location, employment type
+   - Detailed description and requirements
+   - Save to make jobs visible on your career page
+4. **Manage Existing Jobs**: Edit or delete jobs as needed
+
+#### 5. Preview and Publish
+
+1. **Live Preview**: Click "Preview" to see your career page
+2. **Save Changes**: Click "Save" to persist all modifications
+
+### For Candidates
+
+#### 1. Finding Companies
+
+1. **Access Platform**: Visit the application and select "Candidate"
+2. **Browse Companies**: Choose from available companies in the dropdown
+3. **View Career Page**: Click "Continue" to explore the company's page
+
+#### 2. Exploring Company Information
+
+1. **Company Overview**: Read about the company's mission, values etc
+
+#### 3. Finding Job Opportunities
+
+1. **View Open Positions**: Scroll to the "Open Positions" section or click on "View open jobs"
+2. **Use Filters**:
+   - Search by keywords in job titles
+   - Filter by location
+   - Filter by employment type (Full-time, Part-time, etc.)
+3. **Job Details**: Click "View job" on any position to see full details
+
+#### 4. Applying for Jobs
+
+1. **Review Requirements**: Read job description and requirements carefully
+2. **Apply**: Click "Apply Now" button (opens application form : not implemented yet)
