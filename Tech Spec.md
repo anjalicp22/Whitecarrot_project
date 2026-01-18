@@ -18,7 +18,7 @@ The application follows a client-server architecture:
 
 - **Framework**: React 18 with hooks for state management (useState, useEffect).
 - **TypeScript**: Strict typing for components, services, and data models.
-- **Routing**: Declarative routing with React Router (e.g., `/company-slug/edit` for editing, `/company-slug/careers` for viewing).
+- **Routing**: Routing with React Router (e.g., `/company-slug/edit` for editing, `/company-slug/careers` for viewing).
 - **State Management**: Local component state; no global state library (e.g., Redux) is used.
 - **Services**: `storageService` handles all data operations, including CRUD for companies, sections, and jobs.
 - **UI Components**: Reusable components like forms, buttons, and lists, styled with Tailwind CSS.
@@ -106,12 +106,8 @@ Manages publishing and SEO for career pages.
 ## Test Plan
 
 - **Tools**: Jest for testing, React Testing Library for component testing.
-- **Examples**:
-  - Test `storageService.getCompanies()` with mocked Supabase responses.
-  - Test component rendering (e.g., LandingPage with different states).
-  - Test utility functions (e.g., slugify in `utils/slugify.ts`).
 
 ### Test Environment
 
-- **Local**: Run tests with `npm run test` (Jest).
-- **CI/CD**: Integrate with GitHub Actions for automated testing on pushes/PRs.
+- **Local**: Run tests with `npm run test`.
+- **CI/CD**: Integrate with GitHub Actions for automated testing on pushes.
