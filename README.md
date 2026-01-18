@@ -77,9 +77,15 @@ npm run build
 ## Technical Architecture
 
 • Frontend: React 18 along with TypeScript.
+
 • Styling: Uses Tailwind CSS, allowing easy and responsive design in various screen sizes.
+
 • Backend: Powered by Supabase, which offers a PostgreSQL database.
+
 • State Management: Uses React Hooks for managing local state efficiently.
+
 • Routing: Implemented with React Router for smooth client-side navigation between pages.
+
 • Build System: Uses Vite, which makes development faster and production builds more optimized.
+
 • Deploy: In render to create a live website.
