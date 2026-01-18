@@ -1,7 +1,5 @@
 # WhiteCarrot.i.o Project
 
-## Features
-
 ## How To Run
 
 - Node.js 18+ and npm
