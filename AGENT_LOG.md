@@ -2,7 +2,7 @@
 
 ### Figma
 
-- Used Figma to generat design as inspiration for the UI layout and user flow.
+- Used Figma to generate design as inspiration for the UI layout and user flow.
 - **Prompt**:
   "
   I want a career page application.
